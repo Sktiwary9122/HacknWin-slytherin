@@ -25,7 +25,7 @@ html {
     justify-content: center;
     align-items: center;
 }
-.container{
+.container2{
     overflow: hidden;
     height: 650px;
     width: 1080px;
@@ -127,4 +127,10 @@ html {
     display: flex;
     gap: 1rem;
     font-size:x-large;
+}
+.lists a{
+    padding-bottom: 1rem;
+}
+.lists a:hover{
+    border-bottom: 5px solid white;
 }
