@@ -1,4 +1,17 @@
 # virtual-notepad
+
+to run this project->
+cd server
+python server.py
+
+after that run the html file by clicking o "golive"
+or if it is already running just refresh it
+
+and click on try it
+
+watch the tutorial to understand th eusage of this project.
+
+
 This is a virtual painting python script built using opencv and mediapipe
 Its purpose is to eliminate the use of the traditional way of making notes i.e by using pen and paper and even going further 
 this project help us in advancement of learning and technology by replacing the digital note pads.
