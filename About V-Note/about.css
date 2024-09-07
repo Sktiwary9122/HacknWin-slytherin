@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+html { 
+    background: url(3d-render-gradient-7680x4800-10996.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    image-resolution: 300dpi;
+}
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.container3{
+    height: 650px;
+    max-width: 1080px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    padding: 3rem;
+    overflow: hidden;
+}
+.nav{
+    height: 3rem;
+    max-width: 1080px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+}
+.vimg{
+    width: 50px;
+}
+.title{
+    display: flex;
+}
+.note{
+    margin-top: 10px;
+    font-size: 25px;
+}
+.lists{
+    display: flex;
+    gap: 3rem;
+    list-style-type: none;
+    font-size: 25px;
+    margin-top: 0.6rem;
+}
+.lists a{
+    text-decoration: none!important ;
+}
+.icons-scroll{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    max-width: 1080px;
+    overflow-x: hidden;
+
+}
+.icons-scroll img{
+    width: 150px;
+}

@@ -9,7 +9,6 @@ app = Flask(__name__) #creating the Flask class object
 def home():
     print("Route hit")  
     
-    #contants
     ml = 150
     max_x, max_y = 250+ml, 50
     curr_tool = "select tool"
@@ -19,7 +18,6 @@ def home():
     thick = 4
     prevx, prevy = 0,0
 
-    #get tools function
     def getTool(x):
         if x < 50 + ml:
             return "line"
@@ -48,21 +46,11 @@ def home():
     hand_landmark = hands.Hands(min_detection_confidence=0.6, min_tracking_confidence=0.6, max_num_hands=1)
     draw = mp.solutions.drawing_utils
 
-
-    # drawing tools
     tools = cv2.imread("./tools.png")
     tools = tools.astype('uint8')
 
     mask = np.ones((480, 640))*255
     mask = mask.astype('uint8')
-    '''
-    tools = np.zeros((max_y+5, max_x+5, 3), dtype="uint8")
-    cv2.rectangle(tools, (0,0), (max_x, max_y), (0,0,255), 2)
-    cv2.line(tools, (50,0), (50,50), (0,0,255), 2)
-    cv2.line(tools, (100,0), (100,50), (0,0,255), 2)
-    cv2.line(tools, (150,0), (150,50), (0,0,255), 2)
-    cv2.line(tools, (200,0), (200,50), (0,0,255), 2)
-    '''
 
     cap = cv2.VideoCapture(0)
     while True:
@@ -181,7 +169,7 @@ def home():
         frm[:max_y, ml:max_x] = cv2.addWeighted(tools, 0.7, frm[:max_y, ml:max_x], 0.3, 0)
 
         cv2.putText(frm, curr_tool, (270+ml,30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
-        cv2.imshow("paint app", frm)
+        cv2.imshow("V-Note App", frm)
 
         if cv2.waitKey(1) == 27:
             cv2.destroyAllWindows()
